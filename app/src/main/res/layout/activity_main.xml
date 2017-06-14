@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.github.charbgr.reproduciblehistory.MainActivity">
+
+  <EditText
+      android:id="@+id/search_user_name"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="8dp"
+      android:hint="Search GitHub user"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline"
+      app:layout_constraintRight_toLeftOf="@+id/guideline2"
+      app:layout_constraintTop_toTopOf="@+id/guideline3"
+      app:layout_constraintVertical_bias="0.0"
+      android:layout_marginEnd="8dp"/>
+
+  <ProgressBar
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:id="@+id/progress"
+      android:layout_gravity="center"
+      android:indeterminate="true"
+      android:visibility="invisible"
+      android:layout_marginStart="8dp"
+      android:layout_marginLeft="8dp"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline"
+      app:layout_constraintRight_toLeftOf="@+id/guideline2"
+      android:layout_marginRight="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginTop="8dp"
+      app:layout_constraintTop_toBottomOf="@+id/search_user_name"
+      app:layout_constraintBottom_toBottomOf="@+id/user_github_url"
+      android:layout_marginBottom="8dp"/>
+
+   <TextView
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintLeft_toLeftOf="@+id/guideline"
+       app:layout_constraintRight_toLeftOf="@+id/guideline2"
+       app:layout_constraintHorizontal_bias="0.0"
+       android:layout_marginTop="32dp"
+       android:focusable="false"
+       app:layout_constraintTop_toBottomOf="@+id/search_user_name"
+       android:id="@+id/user_name"/>
+
+  <TextView
+      android:id="@+id/user_login"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline"
+      app:layout_constraintRight_toLeftOf="@+id/guideline2"
+      android:layout_marginTop="9dp"
+      app:layout_constraintTop_toBottomOf="@+id/user_name"
+      app:layout_constraintHorizontal_bias="0.0"
+      tools:text="charbgr"/>
+
+  <TextView
+      android:id="@+id/user_github_url"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline"
+      app:layout_constraintRight_toLeftOf="@+id/guideline2"
+      android:layout_marginTop="8dp"
+      app:layout_constraintTop_toBottomOf="@+id/user_login"
+      app:layout_constraintHorizontal_bias="0.0"
+      tools:text="charbgr"/>
+
+  <android.support.constraint.Guideline
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/guideline"
+      app:layout_constraintGuide_begin="16dp"
+      android:orientation="vertical"
+      tools:layout_editor_absoluteY="0dp"
+      tools:layout_editor_absoluteX="16dp"/>
+
+  <android.support.constraint.Guideline
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/guideline2"
+      android:orientation="vertical"
+      app:layout_constraintGuide_end="16dp"
+      tools:layout_editor_absoluteY="0dp"
+      tools:layout_editor_absoluteX="368dp"/>
+
+  <android.support.constraint.Guideline
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/guideline3"
+      app:layout_constraintGuide_begin="20dp"
+      android:orientation="horizontal"
+      tools:layout_editor_absoluteY="20dp"
+      tools:layout_editor_absoluteX="0dp"/>
+
+  <TextView
+      android:text="History:"
+      android:layout_width="0dp"
+      android:gravity="center_horizontal"
+      android:layout_height="wrap_content"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintRight_toLeftOf="@+id/guideline2"
+      android:id="@+id/textView"
+      android:layout_marginTop="22dp"
+      app:layout_constraintTop_toBottomOf="@+id/user_github_url"/>
+
+  <SeekBar
+      android:id="@+id/seekBar"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:max="0"
+      android:paddingTop="12dp"
+      app:layout_constraintLeft_toLeftOf="@+id/guideline"
+      app:layout_constraintRight_toLeftOf="@+id/guideline2"
+      android:paddingBottom="12dp"
+      android:layout_marginStart="8dp"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:layout_marginEnd="8dp"
+      android:layout_marginTop="13dp"
+      app:layout_constraintTop_toBottomOf="@+id/textView"/>
+
+</android.support.constraint.ConstraintLayout>
